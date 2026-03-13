@@ -39,7 +39,7 @@ tests:
 about:
   summary: napari bfffile-based reader plugin
   license: GPL-2.0-or-later
-  license_file: LICENSE
+  license_file: LICENSE.txt
   homepage: https://github.com/imaging-formats/napari-bioformats
 
 extra:
