@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.3.0
+  version: 0.3.0.post0
 
 package:
   name: napari-bioformats
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/n/napari-bioformats/napari_bioformats-${{ version }}.tar.gz
-  sha256: 929a4d8e1abaf96ec7684c1dd4cec2768e31f7f7d7af04a8f53c3b356fd80180
+  sha256: 9884123c94fbdc93003ebd8dbb56cd773830d08aeaddbd77b56bbbcaeb1e30c9
 
 build:
   number: 0
