@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  version: 0.3.0.post0
+
+package:
+  name: napari-bioformats
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/n/napari-bioformats/napari_bioformats-${{ version }}.tar.gz
+  sha256: 9884123c94fbdc93003ebd8dbb56cd773830d08aeaddbd77b56bbbcaeb1e30c9
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - hatch-vcs
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - napari >=0.5.0
+    - bffile
+
+tests:
+  - python:
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+      imports:
+        - napari_bioformats
+      pip_check: true
+
+about:
+  summary: napari bfffile-based reader plugin
+  license: GPL-2.0-or-later
+  license_file: LICENSE
+  homepage: https://github.com/imaging-formats/napari-bioformats
+
+extra:
+  recipe-maintainers:
+    - tlambert03
+    - psobolewskiPhD
